@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
 </head>
+
 <body>
     <header>
         <h1>Helle Fruergaard's Portfolio</h1>
         <p>Welcome to my portfolio</p>
     </header>
+    <h1>Projects</h1>
 
     <section id="projects">
-        <h1>Projects</h1>
 
-        <!-- Links to your GitHub projects will go here -->
         <div>
             <h2>Dating App</h2>
             <p>A React Dating App</p>
@@ -52,7 +53,8 @@
         <div>
             <h2>Shopping Cart</h2>
             <p>A simple PHP Shopping Cart</p>
-            <a href="https://limitless-reaches-91898-b7c1d358577a.herokuapp.com/index.php" target="_blank">View Project</a>
+            <a href="https://limitless-reaches-91898-b7c1d358577a.herokuapp.com/index.php" target="_blank">View
+                Project</a>
         </div>
         <!-- Add more project sections as needed -->
     </section>
@@ -61,27 +63,38 @@
         <p>© 2024 Helle Fruergaard</p>
     </footer>
 </body>
+
 </html>
 <style>
     body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-header, section, footer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-}
+    header,
+    section,
+    footer {
+        max-width: 80vw;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
 
-section div {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-}
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap:1em;
+    }
 
+    section div {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        width:20vw;
+    }
 </style>
