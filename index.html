@@ -4,97 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here */
+        .background {
+            padding: 20px;
+        }
+        .hero-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-gap: 20px;
+        }
+        .project {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project h2 {
+            margin-top: 0;
+            white-space: nowrap;
+        }
+        .project p {
+            margin-bottom: 20px;
+        }
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Helle Fruergaard's Portfolio</h1>
-        <p>Welcome to my portfolio</p>
-    </header>
-    <h1>Projects</h1>
+    <div class="container">
+        <div class="background">
 
-    <section id="projects">
+            <div class="hero-header">
+                <h1>Helle Fruergaard</h1>
+                <p>Welcome to my Portfolio</p>
+            </div>
 
-        <div>
-            <h2>Dating App</h2>
-            <p>A React Dating App</p>
-            <a href="https://hellefh.github.io/dating-app-react/" target="_blank">View Project</a>
-        </div>
+            <section class="projects">
+                <div class="project">
+                    <h2>Dating App</h2>
+                    <p>React, JavaScript</p>
+                    <img class="project-image" src="images/dating-app.png" alt="Dating App">
+                    <a href="https://hellefh.github.io/dating-app-react/" target="_blank" class="btn btn-primary btn-info mt-4">View Project</a>
+                </div>
 
-        <div>
-            <h2>Netflix Clone</h2>
-            <p>Film site made with pure JavaScript</p>
-            <a href="https://hellefh.github.io/netflix/" target="_blank">View Project</a>
-        </div>
+                <div class="project">
+                    <h2>Netflix Clone</h2>
+                    <p>JavaScript</p>
+                    <img class="project-image" src="images/netflix.png" alt="Netflix Clone">
+                    <a href="https://hellefh.github.io/Netflix-clone/" target="_blank" class="btn btn-primary btn-info mt-4">View Project</a>
+                </div>
 
-        <div>
-            <h2>Developer Course Site</h2>
-            <p>A site for a frontend developer course</p>
-            <a href="https://hellefh.github.io/webudvikler_site/" target="_blank">View Project</a>
-        </div>
+                <div class="project">
+                    <h2>Course Site</h2>
+                    <p>PHP, JavaScript</p> 
+                    <img class="project-image" src="images/developer-site.png" alt="Developer Course">
+                    <a href="https://developer-site-692094e4504c.herokuapp.com/" target="_blank" class="btn btn-primary btn-info mt-4">View Project</a>
+                </div>
 
-        <div>
-            <h2>Dinosaur Gallery</h2>
-            <p>A gallery made with JQuery</p>
-            <a href="https://hellefh.github.io/Lightbox-gallery/" target="_blank">View Project</a>
-        </div>
-        <div>
-            <h2>Form</h2>
-            <p>Form validation with JavaScript</p>
-            <a href="https://hellefh.github.io/Forms/" target="_blank">View Project</a>
-        </div>
-        <div>
-            <h2>Webshop</h2>
-            <p>HTML and CSS for a webshop</p>
-            <a href="https://hellefh.github.io/Legekrogen/" target="_blank">View Project</a>
-        </div>
+                <div class="project">
+                    <h2>Lightbox Gallery</h2>
+                    <p>JQuery</p>
+                    <img class="project-image" src="images/dinosaurs.png" alt="Dinosaur Gallery">
+                    <a href="https://hellefh.github.io/Lightbox-gallery/" target="_blank" class="btn btn-primary btn-info mt-4">View Project</a>
+                </div>
 
-        <div>
-            <h2>Shopping Cart</h2>
-            <p>A simple PHP Shopping Cart</p>
-            <a href="https://floating-headland-48660-873b37cb5d72.herokuapp.com/" target="_blank">View
-                Project</a>
-        </div>
-        <!-- Add more project sections as needed -->
-    </section>
+                <div class="project">
+                    <h2>Webshop</h2>
+                    <p>HTML, CSS</p>
+                    <img class="project-image" src="images/legekrogen.png" alt="Webshop">
+                    <a href="https://hellefh.github.io/Legekrogen/" target="_blank" class="btn btn-primary btn-info mt-4">View Project</a>
+                </div>
 
-    <footer>
-        <p>© 2024 Helle Fruergaard</p>
-    </footer>
+                <div class="project">
+                    <h2>Shopping Cart</h2>
+                    <p>PHP sessions, postgresSQL, Tailwind</p>
+                    <img class="project-image" src="images/shopping-cart.png" alt="Shopping Cart">
+                    <a href="https://floating-headland-48660-873b37cb5d72.herokuapp.com/" target="_blank" class="btn btn-primary btn-info mt-4">View Project</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-
-    header,
-    section,
-    footer {
-        max-width: 80vw;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        margin-bottom: 20px;
-    }
-
-    section {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap:1em;
-    }
-
-    section div {
-        border: 1px solid #ddd;
-        padding: 15px;
-        margin-bottom: 15px;
-        width:20vw;
-    }
-</style>
