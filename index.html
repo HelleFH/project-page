@@ -9,78 +9,139 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Add custom styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #5bccf6;
+            
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {font-size: 48px;}
+
+
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
+  h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+
+        /* Hero section styles */
+        .hero-section {
+            position: relative;
+            background: url('images/hero.png') center/cover no-repeat; /* Replace 'your-hero-image.jpg' with your actual image */
+            height: 300px; /* Adjust the height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden; /* Ensure the gradient overlay doesn't overflow */
+        }
+
+        /* Gradient overlay pseudo-element */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(91, 204, 246, 0.8)); /* Adjust the gradient colors and stops */
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 1; /* Ensure the overlay is on top of the gradient */
+
+        }
+
+        .hero-header h1,
+        .hero-header p {
+            color: black    ;
+            margin: 0;
+        }
+
+        /* Your existing styles */
         .background {
             padding: 20px;
         }
-        .hero-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
             grid-gap: 20px;
         }
+
         .project {
-            background-color: #f8f9fa;
+            background-color: #fcde67;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .project h2 {
             margin-top: 0;
             white-space: nowrap;
         }
+
         .project p {
             margin-bottom: 20px;
         }
+
         .project-image {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
         }
+
+        .btn {
+            background-color: #030e12;
+            color: white;
+            border: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Hero section -->
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <div class="hero-header">
+                <h1 class="font-weight-bold">Helle Fruergaard</h1>
+                <h3 class="font-weight-bold">Welcome to my Portfolio</h3>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="background">
-            <div class="hero-header">
-                <h1>Helle Fruergaard</h1>
-                <p>Welcome to my Portfolio</p>
-            </div>
             <section class="projects" id="projectsContainer">
+                <!-- Add your project content here -->
             </section>
         </div>
     </div>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Project data in JSON format
-        const projects = [
-        {
-    "name": "Dating App",
-    "technologies": "React, JavaScript",
-    "image": "images/dating-app.png",
-    "projectLink": "https://hellefh.github.io/dating-app-react/",
-    "githubLink": "https://github.com/hellefh/dating-app",
+
+    const projects = [
+      
+  {
+    "name": "MERN Shopping Cart",
+    "technologies": "PHP sessions, PostgreSQL, Tailwind",
+    "image": "images/shopping-cart.png",
+    "projectLink": "https://shopping-cart-master-fe.onrender.com",
+    "githubLink": "https://github.com/hellefh/shopping-cart",
     "buttonText": "View Project",
     "githubButtonText": "GitHub"
   },
   {
-    "name": "Netflix Clone",
-    "technologies": "JavaScript",
-    "image": "images/netflix.png",
-    "projectLink": "https://hellefh.github.io/Netflix-clone/",
-    "githubLink": "https://github.com/hellefh/Netflix-clone",
-    "buttonText": "View Project",
-    "githubButtonText": "GitHub"
-  },
-  {
-    "name": "Course Site",
-    "technologies": "PHP, JavaScript",
-    "image": "images/developer-site.png",
-    "projectLink": "https://developer-site-692094e4504c.herokuapp.com/",
-    "githubLink": "https://github.com/hellefh/webudvikler-site",
+    "name": "MERN Listings",
+    "technologies": "PHP sessions, PostgreSQL, Tailwind",
+    "image": "images/shopping-cart.png",
+    "projectLink": "https://react-upload-download-files-fe.onrender.com",
+    "githubLink": "https://github.com/hellefh/shopping-cart",
     "buttonText": "View Project",
     "githubButtonText": "GitHub"
   },
@@ -93,6 +154,35 @@
     "buttonText": "View Project",
     "githubButtonText": "GitHub"
   },
+
+  {
+    "name": "PHP Shopping Cart",
+    "technologies": "PHP sessions, PostgreSQL, Tailwind",
+    "image": "images/shopping-cart.png",
+    "projectLink": "https://floating-headland-48660-873b37cb5d72.herokuapp.com/",
+    "githubLink": "https://github.com/hellefh/shopping-cart",
+    "buttonText": "View Project",
+    "githubButtonText": "GitHub"
+  },
+  {
+    "name": "Dating App",
+    "technologies": "React, JavaScript",
+    "image": "images/dating-app.png",
+    "projectLink": "https://hellefh.github.io/react-app",
+    "githubLink": "https://github.com/hellefh/react-app",
+    "buttonText": "View Project",
+    "githubButtonText": "GitHub"
+  },
+  {
+    "name": "Netflix Clone",
+    "technologies": "JavaScript",
+    "image": "images/netflix.png",
+    "projectLink": "https://hellefh.github.io/Netflix-clone-main/",
+    "githubLink": "https://github.com/HelleFH/Netflix-clone-main",
+    "buttonText": "View Project",
+    "githubButtonText": "GitHub"
+  },
+
   {
     "name": "Webshop",
     "technologies": "HTML, CSS",
@@ -103,11 +193,11 @@
     "githubButtonText": "GitHub"
   },
   {
-    "name": "Shopping Cart",
-    "technologies": "PHP sessions, PostgreSQL, Tailwind",
-    "image": "images/shopping-cart.png",
-    "projectLink": "https://floating-headland-48660-873b37cb5d72.herokuapp.com/",
-    "githubLink": "https://github.com/hellefh/shopping-cart",
+    "name": "Course Site",
+    "technologies": "PHP, JavaScript",
+    "image": "images/developer-site.png",
+    "projectLink": "https://developer-site-692094e4504c.herokuapp.com/",
+    "githubLink": "https://github.com/hellefh/webudvikler-site",
     "buttonText": "View Project",
     "githubButtonText": "GitHub"
   }
@@ -139,7 +229,7 @@ function createProjectElement(project) {
     const githubLinkElement = document.createElement('a');
     githubLinkElement.href = project.githubLink;
     githubLinkElement.target = "_blank";
-    githubLinkElement.classList.add('btn', 'btn-primary', 'btn-info', 'mt-4' , 'ml-2');
+    githubLinkElement.classList.add('btn' , 'mt-4' , 'ml-2');
     githubLinkElement.textContent = "GitHub";
 
     projectElement.appendChild(titleElement);
@@ -151,7 +241,6 @@ function createProjectElement(project) {
     return projectElement;
 }
 
-// Function to render projects
 function renderProjects() {
     const projectsContainer = document.getElementById('projectsContainer');
     projects.forEach(project => {
@@ -160,7 +249,6 @@ function renderProjects() {
     });
 }
 
-// Render projects when the page is loaded
 document.addEventListener('DOMContentLoaded', renderProjects);
 
     </script>
